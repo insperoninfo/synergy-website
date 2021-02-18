@@ -1,9 +1,133 @@
-{% extends 'website/base.html' %}
+{% extends 'website/base.html' %} {% load static %} {% block title %} - Home {% endblock %} {% block content %}
+<!-- background img and content -->
+<div class="bimg">
+    <div class="container">
 
-{% block title %} - Home {% endblock %}
 
-{% block content %}
+        <div class="row body-part">
+            <div class="col-md-6 body-part-col">
+                <p>Lorem ipsum dolor .</p>
+                <h2>Welcome to sernegy management we provude best ,fast services</span>
+                </h2>
+                <button type="button" class="btn btn-primary">More-info</button>
 
-	<h1>Synergy</h1>
+            </div>
+            <div class="col-md-6 left-body-col-img">
+                <div class="bimg1"></div>
+            </div>
+        </div>
+    </div>
 
-{% endblock %}
+</div>
+<!-- end background img and content -->
+<!-- card of body -->
+<div class="container mt-2">
+    <div class="why-synergy-text">
+        <h2>Synergy Management</h2>
+        <hr>
+        < <br>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum reprehenderit consequuntur possimus incidunt enim eligendi. Rem natus voluptates nobis est quod facilis, veritatis doloremque quaerat, sint cum mollitia sed excepturi
+                quisquam ab, asperiores similique iure aperiam tempore atque vel quasi itaque dignissimos nulla. Minus, itaque facere. Inventore, repudiandae quos?</p>
+    </div>
+
+    <div class="row card-row pt-4">
+        <div class="col-md-4 col-sm-12 item">
+            <a href="#">
+                <div class="card item-card card-block">
+                    <img src="{% static  'website/img/r.jpg' %}" alt="image1">
+
+
+                    <div class="card-content">
+                        <h3 class="card-title  mt-3 mb-3">Who we are</h3>
+                        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 item">
+            <a href="#">
+                <div class="card item-card card-block">
+
+                    <img src="{% static  'website/img/w.jpg' %}" alt="image1">
+                    <div class="card-content">
+                        <h3 class="card-title  mt-3 mb-3">What we do</h3>
+                        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 item">
+            <a href="#">
+                <div class="card item-card card-block">
+
+                    <img src="{% static  'website/img/s.jpg' %}" alt="image3">
+                    <div class="card-content">
+                        <h3 class="card-title  mt-3 mb-3">How we do it</h3>
+                        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- end the card of boby -->
+
+<!-- section1  our core service-->
+<section class="bg-light">
+    <div class="container ">
+        <div class="why-synergy-text">
+            <h2>Service we offers to our happy client</h2>
+            <hr>
+            <br>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum reprehenderit consequuntur possimus incidunt enim eligendi. Rem natus voluptates nobis est quod facilis, veritatis doloremque quaerat, sint cum mollitia sed excepturi
+                quisquam ab, asperiores similique iure aperiam tempore atque vel quasi itaque dignissimos nulla. Minus, itaque facere. Inventore, repudiandae quos?</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-ms-10">
+                <div class="icon-part"><i class="fa fa-book" aria-hidden="true"></i></div>
+                <h4>Audit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere iste aperiam eaque ?</p>
+                <a href="#"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+            <div class="col-md-3 col-ms-10">
+                <div class="icon-part"><i class="fa fa-book" aria-hidden="true"></i></div>
+                <h4>Audit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere iste aperiam eaque ?</p>
+                <a href="#"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+            <div class="col-md-3 col-ms-10">
+                <div class="icon-part"><i class="fa fa-book" aria-hidden="true"></i></div>
+                <h4>Taxation</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere iste aperiam eaque ?</p>
+                <a href="#"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+            <div class="col-md-3 col-ms-10">
+                <div class="icon-part"><i class="fa fa-book" aria-hidden="true"></i></div>
+                <h4>Human Resourse service</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere iste aperiam eaque ?</p>
+                <a href="#"><button type="button" class="btn btn-primary">View-more</button></a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+< <!-- end our core servicees -->
+    <!-- section for event and news -->
+    <section>
+
+    </section>
+    <!-- end the evevent and news section -->
+
+
+    {% endblock %}
