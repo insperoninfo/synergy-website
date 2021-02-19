@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from django.views.generic import CreateView
+from website.models import Message
+from django.core.exceptions import ValidationError
+from django.contrib import messages
+from .send_emails import message_notification
 
 
 def index(request):
@@ -18,4 +23,21 @@ def locations(request):
 
 
 def contact_us(request):
+	if request.method == 'POST':
+		form_data = request.POST
+		full_name = form_data.get('name')
+		email = form_data.get('email')
+		phone_number = form_data.get('phone')
+		branch = form_data.get('branch')
+		message_query = form_data.get('message')
+
+		message = Message(full_name=full_name,email=email, phone_number=phone_number,branch=branch, message_query=message_query)
+		message.save()
+		
+		message_notification(full_name,email,phone_number, branch, message_query)
+		
+		messages.success(request, 'Thank you for sending us your query. We will get back to you as soon as possible.')
+
+
 	return render(request, 'website/contact_us.html')
+
