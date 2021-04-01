@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import CreateView
-from website.models import Message
+from website.models import Message, Document
 from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .send_emails import message_notification
@@ -40,4 +40,15 @@ def contact_us(request):
 
 
 	return render(request, 'website/contact_us.html')
+
+
+def documentList(request):
+	documents = Document.objects.all()
+
+	context = {
+		'documents' : documents
+	}
+
+	return render(request, 'website/document_list.html', context)
+
 

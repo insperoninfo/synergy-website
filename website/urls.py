@@ -5,6 +5,7 @@ from website.views import (
 		services,
 		locations,
 		contact_us,
+		documentList,
 	)
 
 urlpatterns = [
@@ -13,4 +14,5 @@ urlpatterns = [
     path('our-services', services, name='services'),
     path('our-locations', locations, name='locations'),
     path('contact-us', contact_us, name='contact_us'),
+    path('documents', documentList, name='documents'),
 ]
